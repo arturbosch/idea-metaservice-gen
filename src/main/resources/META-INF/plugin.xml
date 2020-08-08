@@ -1,0 +1,27 @@
+<idea-plugin>
+    <id>io.abosch.idea-metaservice-gen</id>
+    <name>Meta-Inf Service Generator</name>
+    <vendor email="arturbosch@gmx.de" url="http://www.abosch.io">Artur Bosch</vendor>
+
+    <description><![CDATA[
+        This plugin generates a META-INF/services/<file> entry for you based on the extended type.
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.java</depends>
+    <depends>org.jetbrains.kotlin</depends>
+
+    <idea-version since-build="192"/>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <action id="io.abosch.idea.metaservice.gen.MetaServiceAction"
+                class="io.abosch.idea.metaservice.gen.MetaServiceAction"
+                text="Generate MetaInf Service Entry"
+                description="Generates for current open file an service entry."/>
+    </actions>
+</idea-plugin>
